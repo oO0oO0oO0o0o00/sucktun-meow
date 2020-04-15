@@ -1,6 +1,6 @@
 {
 	"name": "tcp-over-websockets",
-	"description": "Tunnel TCP through WebSockets.",
+	"description": "Tunnel TCP through WebSockets with additional authentication to pass through our campus web proxy",
 	"version": "1.0.0",
 	"main": "server.js",
 	"bin": {
@@ -19,9 +19,9 @@
 		"http"
 	],
 	"author": "Jannis R <mail@jannisr.de>",
-	"homepage": "https://github.com/derhuerst/tcp-over-websockets",
-	"repository": "derhuerst/tcp-over-websockets",
-	"bugs": "https://github.com/derhuerst/tcp-over-websockets/issues",
+	"homepage": "https://xxx",
+	"repository": "xxx",
+	"bugs": "https://xxx",
 	"license": "ISC",
 	"engines": {
 		"node": ">=8"
@@ -30,7 +30,8 @@
 		"debug": "^4.1.0",
 		"mri": "^1.1.0",
 		"pump": "^3.0.0",
-		"websocket-stream": "^5.1.1"
+		"puppeteer": "^2.1.1",
+		"websocket-stream": "^5.1.1",
 	},
 	"scripts": {
 		"start": "node server.js"

@@ -1,7 +1,26 @@
 'use strict'
+const sleep = (ms) => {
+	return new Promise((resolve) => {
+		setTimeout(resolve, ms);
+	});
+}
+async function meow() {
+	await sleep(100)
+}
 
-const {createServer: createHttpServer, get: httpGet} = require('http')
-const {strictEqual} = require('assert')
+(async () => {
+	let a = meow()
+	await a
+	await a
+})()
+
+const {
+	createServer: createHttpServer,
+	get: httpGet
+} = require('http')
+const {
+	strictEqual
+} = require('assert')
 const startServer = require('./server')
 const startClient = require('./client')
 

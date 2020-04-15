@@ -1,0 +1,29 @@
+方案一：
+
+1. 确保计算机上有nodejs的10版本或更高。Atom编辑器等软件会附带nodejs，可使用Everything在文件中搜索node.exe并检查版本。
+
+2. 将本文件夹放置于方便食用的地方。
+
+3. 编辑package.json文件，删除puppeteer": "^2.1.1",这行，因为它下载一个200MB的chrome，如果梯子不稳定会失败。
+
+4. 从本文件夹打开命令行，输入npm install安装依赖项。如果npm不在PATH中可以添加&重开命令行，或使用完整路径C:\xxx\xxx\npm.exe。
+
+5. 如果是powershell则输入cmd进入cmd。
+
+6. 输入set PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true以设置不下载chrome。
+
+7. 输入npm i puppeteer@2.1.1安装它。
+
+8. 输入exit退出cmd回到powershell。
+
+9. 手动下载https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/722234/chrome-win.zip或从其他镜像下载，解压到本文件夹\node_modules\puppeteer\.local-chromium\win64-722234。你可以试试它能不能就用你自己电脑上的chrome甚至360极速浏览器，但是估计够呛，只能保证这里给的这个版本能用。
+
+10. 将config.示例.json重命名为config.json，并修改其中的用户名密码为你的学号和网关登录密码。
+
+11. 命令行输入node .\cli\client.js ws://内网-ip-地址-点换横线.校园网代理网址/ 127.0.0.1:目标端口 在本机开放的端口。如node .\cli\client.js ws://172-1-2-3.meow.meow.edu.cn:8118/ 127.0.0.1:22 2222就把服务端的22端口（ssh）映射到自己电脑的2222端口。可使用puTTY访问127.0.0.1:2222就等于访问内网服务器的22端口。会自动弹出chrome并自动登录，不要人为干预，如果它失败了你手动登录也没用，可能就得命令行Ctrl+C再按上箭头再按回车重启程序。安全性取决于连接本身，没加额外的tls。比如ssh就是安全的。
+
+12. 准备接收处分通知单。
+
+方案二：
+
+真几把麻烦啊艹。不如直接下载整合包，可以问猫猫要。
